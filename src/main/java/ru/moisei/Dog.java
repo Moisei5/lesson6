@@ -1,26 +1,26 @@
 package ru.moisei;
 
 public class Dog extends Animal {
-    public Dog(String name, int age, int run, int swimming) {
+    public Dog(String name) {
         this.name = name;
-        this.age = age;
-        this.run = run;
-        this.swimming = swimming;
-    }
 
-    public void run() {
-        if (this.run <= 500) {
-            System.out.print(name + " " + age + " пробежал " + this.run);
+    }
+    private final int MAX_SWIM = 10;
+    private final int MAX_RUN = 500;
+    @Override
+    public void run(int runing) {
+        if (runing <= MAX_RUN) {
+            System.out.println(name + " пробежал " + runing);
         } else {
-            System.out.print(name + " " + age + " не может столько пробежать " + this.run);
+            System.out.println(name + " не может столько пробежать " + runing);
         }
     }
 
-    public void swim() {
-        if (this.swimming <= 20) {
-            System.out.println(" и проплыл " + this.swimming);
+    public void swim(int swimming) {
+        if (swimming <= MAX_SWIM) {
+            System.out.println(name + " проплыл " + swimming);
         } else {
-            System.out.println(", но не может проплыть " + this.swimming);
+            System.out.println(name + " не может проплыть " + swimming);
         }
     }
 }

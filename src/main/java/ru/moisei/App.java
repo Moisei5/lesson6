@@ -11,16 +11,25 @@ public class App {
 
     public static void main(String[] args) {
         Animal[] animal = {
-                new Cat("барсик", 2, 500, 5),
-                new Cat("Мурзик", 4, 40, 0),
-                new Dog("бобик", 3, 100, 30),
-                new Dog("шарик", 5, 650, 8),
-                new Dog("Граф", 5, 300,10)
+                new Cat("Barsik"),
+                new Cat("Мурзик"),
+                new Dog("бобик"),
+                new Dog("шарик"),
+
         };
-        for (int i = 0; i < animal.length; i++) {
-            animal[i].run();
-            animal[i].swim();
-        }
+        animal[0].run(100);
+        animal[0].swim(0);
+        System.out.println();
+        animal[1].run(300);
+        animal[1].swim(10);
+        System.out.println();
+        animal[2].run(100);
+        animal[2].swim(10);
+        System.out.println();
+        animal[3].run(600);
+        animal[3].swim(21);
+        System.out.println();
+
     }
 }
 

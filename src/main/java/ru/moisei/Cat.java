@@ -1,26 +1,26 @@
 package ru.moisei;
 
 public class Cat extends Animal {
-    public Cat(String name, int age, int run, int swimming) {
+    public Cat(String name) {
         this.name = name;
-        this.age = age;
-        this.run = run;
-        this.swimming = swimming;
-    }
 
-    public void run() {
-        if (this.run <= 200) {
-            System.out.print(name + " " + age + " пробежал " + this.run);
+    }
+    private final int MAX_SWIM = 0;
+    private final int MAX_RUN = 200;
+    @Override
+    public void run(int runing) {
+        if (runing <= MAX_RUN) {
+            System.out.println(name + " пробежал " + runing);
         } else {
-            System.out.print(name + " " + age + " не может столько пробежать " + this.run);
+            System.out.println(name + " не может столько пробежать " + runing);
         }
     }
 
-    public void swim() {
-        if (this.swimming <= 1) {
+    public void swim(int swimming) {
+        if (swimming <= MAX_SWIM) {
             System.out.println(" ");
         } else {
-            System.out.println(", не умеет плавать");
+            System.out.println(name + " не умеет плавать");
         }
     }
 }
